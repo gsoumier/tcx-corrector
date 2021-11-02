@@ -40,58 +40,19 @@ import javax.xml.datatype.XMLGregorianCalendar
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = ["id", "lap", "creator"])
+@XmlType(name = "", propOrder = ["id", "laps", "creator"])
 @XmlRootElement(name = "Activity")
 class Activity {
-    /**
-     * Gets the value of the id property.
-     *
-     * @return
-     * possible object is
-     * [XMLGregorianCalendar]
-     */
-    /**
-     * Sets the value of the id property.
-     *
-     * @param value
-     * allowed object is
-     * [XMLGregorianCalendar]
-     */
+
     @XmlElement(name = "Id", required = true)
     var id: XMLGregorianCalendar? = null
 
     @XmlElement(name = "Lap", required = true)
-    protected var lap: List<Lap>? = null
-    /**
-     * Gets the value of the creator property.
-     *
-     * @return
-     * possible object is
-     * [Creator]
-     */
-    /**
-     * Sets the value of the creator property.
-     *
-     * @param value
-     * allowed object is
-     * [Creator]
-     */
+    var laps: List<Lap>? = null
+
     @XmlElement(name = "Creator", required = true)
     var creator: Creator? = null
-    /**
-     * Gets the value of the sport property.
-     *
-     * @return
-     * possible object is
-     * [String]
-     */
-    /**
-     * Sets the value of the sport property.
-     *
-     * @param value
-     * allowed object is
-     * [String]
-     */
+
     @XmlAttribute(name = "Sport", required = true)
     var sport: String? = null
 

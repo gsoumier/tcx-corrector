@@ -94,7 +94,7 @@ class Trackpoint {
     var altitudeMeters: BigDecimal? = null
 
     @XmlElement(name = "DistanceMeters")
-    protected var distanceMeters: String? = null
+    var distanceMeters: String? = null
     /**
      * Gets the value of the heartRateBpm property.
      *

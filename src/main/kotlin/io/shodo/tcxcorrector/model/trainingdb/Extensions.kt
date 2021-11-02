@@ -41,46 +41,9 @@ import jakarta.xml.bind.annotation.XmlType
 @XmlRootElement(name = "Extensions")
 class Extensions {
     @XmlElement(name = "TPX", namespace = "http://www.garmin.com/xmlschemas/ActivityExtension/v2")
-    protected var tpx: TPX? = null
+    var tpx: TPX? = null
 
     @XmlElement(name = "LX", namespace = "http://www.garmin.com/xmlschemas/ActivityExtension/v2")
-    protected var lx: LX? = null
-    /**
-     * Gets the value of the tpx property.
-     *
-     * @return
-     * possible object is
-     * [TPX]
-     */
-    /**
-     * Sets the value of the tpx property.
-     *
-     * @param value
-     * allowed object is
-     * [TPX]
-     */
-    var tPX: TPX?
-        get() = tpx
-        set(value) {
-            tpx = value
-        }
-    /**
-     * Gets the value of the lx property.
-     *
-     * @return
-     * possible object is
-     * [LX]
-     */
-    /**
-     * Sets the value of the lx property.
-     *
-     * @param value
-     * allowed object is
-     * [LX]
-     */
-    var lX: LX?
-        get() = lx
-        set(value) {
-            lx = value
-        }
+    var lx: LX? = null
+
 }

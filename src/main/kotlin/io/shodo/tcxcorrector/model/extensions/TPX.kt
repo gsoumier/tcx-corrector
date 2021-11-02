@@ -4,13 +4,10 @@
 // Any modifications to this file will be lost upon recompilation of the source schema. 
 // Generated on: 2015.09.09 at 12:20:23 PM MDT 
 //
-package io.shodo.tcxcorrector.model.trainingdb
+package io.shodo.tcxcorrector.model.extensions
 
-import jakarta.xml.bind.annotation.XmlAccessType
-import jakarta.xml.bind.annotation.XmlAccessorType
-import jakarta.xml.bind.annotation.XmlElement
-import jakarta.xml.bind.annotation.XmlRootElement
-import jakarta.xml.bind.annotation.XmlType
+import jakarta.xml.bind.annotation.*
+import java.math.BigDecimal
 
 /**
  *
@@ -24,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType
  * &lt;complexContent>
  * &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  * &lt;sequence>
- * &lt;element ref="{http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2}Trackpoint" maxOccurs="unbounded"/>
+ * &lt;element ref="{http://www.garmin.com/xmlschemas/ActivityExtension/v2}Speed"/>
  * &lt;/sequence>
  * &lt;/restriction>
  * &lt;/complexContent>
@@ -34,9 +31,13 @@ import jakarta.xml.bind.annotation.XmlType
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = ["trackpoints"])
-@XmlRootElement(name = "Track")
-class Track {
-    @XmlElement(name = "Trackpoint", required = true)
-    var trackpoints: List<Trackpoint>? = null
+@XmlType(name = "", propOrder = ["speed","runCadence"])
+@XmlRootElement(name = "TPX")
+class TPX {
+
+    @XmlElement(name = "Speed", required = true)
+    var speed: BigDecimal? = null
+
+    @XmlElement(name = "RunCadence", required = true)
+    var runCadence: Int? = null
 }
