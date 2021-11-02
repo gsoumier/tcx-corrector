@@ -59,7 +59,7 @@ class Trackpoint {
      * [XMLGregorianCalendar]
      */
     @XmlElement(name = "Time", required = true)
-    var time: XMLGregorianCalendar? = null
+    lateinit var time: XMLGregorianCalendar
     /**
      * Gets the value of the position property.
      *
@@ -75,7 +75,7 @@ class Trackpoint {
      * [Position]
      */
     @XmlElement(name = "Position")
-    var position: Position? = null
+    lateinit var position: Position
     /**
      * Gets the value of the altitudeMeters property.
      *

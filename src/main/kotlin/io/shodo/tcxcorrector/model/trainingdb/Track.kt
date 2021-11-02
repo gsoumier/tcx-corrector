@@ -38,5 +38,5 @@ import jakarta.xml.bind.annotation.XmlType
 @XmlRootElement(name = "Track")
 class Track {
     @XmlElement(name = "Trackpoint", required = true)
-    var trackpoints: List<Trackpoint>? = null
+    lateinit var trackpoints: List<Trackpoint>
 }

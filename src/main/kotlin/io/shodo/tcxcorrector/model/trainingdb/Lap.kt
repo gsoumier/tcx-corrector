@@ -209,7 +209,7 @@ class Lap {
      * [Track]
      */
     @XmlElement(name = "Track", required = true)
-    var track: Track? = null
+    lateinit var track: Track
     /**
      * Gets the value of the extensions property.
      *
